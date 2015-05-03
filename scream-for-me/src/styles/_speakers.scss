@@ -1,18 +1,47 @@
+.talk-article {
+  padding: em(40) 0;
+}
+
 .talk-block {
   @include clearfix;
+  padding: em(30) 0;
+}
+
+.talk-title {
+  text-align: center;
 }
 
 .the-speaker {
-
+  @include clearfix;
 }
 
 .speaker-picture {
   @include clearfix;
+  display: block;
   img {
     width: 200px;
     height: auto;
+    margin: auto;
+    border-radius: 100%;
   }
   p {
     display: block;
+    text-align: center;
+  }
+}
+
+.speaker-picture__double {
+  @include clearfix;
+  @include media($desktop-x) {
+    @include span-columns(3);
+    @include shift(2);
+  }
+
+  @include media($tablet) {
+    @include span-columns(8);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
   }
 }
