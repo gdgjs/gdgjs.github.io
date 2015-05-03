@@ -99,6 +99,14 @@ a {
   width: 100%;
 }
 
+.google-developers__logo {
+  width: 500px;
+  margin: auto;
+}
+
 .big-title {
+  font-size: rem(40);
+  font-weight: 600;
   text-align: center;
+  text-transform: uppercase;
 }
