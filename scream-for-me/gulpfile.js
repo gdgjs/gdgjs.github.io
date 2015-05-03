@@ -19,3 +19,14 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('build/js/a.js'));
 });
 
+// Sass task
+gulp.task('sass', function() {
+  gulp.src('src/styles/main.scss')
+    .pipe(sass({
+      style: 'expanded',
+      includePaths: neat
+    }))
+    .pipe(gulp.dest('css'))
+    .pipe(minifycss())
+    .pipe(gulp.dest('css'));
+});
