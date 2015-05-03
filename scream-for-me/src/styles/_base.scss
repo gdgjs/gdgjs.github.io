@@ -110,3 +110,9 @@ a {
   text-align: center;
   text-transform: uppercase;
 }
+
+.other-article {
+  @include media($desktop-x) {
+    height: 500px;
+  }
+}
