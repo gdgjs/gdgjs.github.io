@@ -6,6 +6,9 @@ var minifycss = require('gulp-minify-css');
 var neat = require('node-neat').includePaths;
 var transform = require('vinyl-transform');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+
 
 // Browserify task
 gulp.task('browserify', function() {
@@ -35,6 +38,16 @@ gulp.task('sass', function() {
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('src/**/*.*', ['default']);
+});
+
+// Imagemin task
+gulp.task('imagemin', function () {
+  gulp.src('src/img/*')
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('src/img'));
 });
 
 // Default task
