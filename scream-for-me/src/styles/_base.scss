@@ -101,11 +101,12 @@ a {
 
 .google-developers__logo {
   width: 500px;
-  margin: auto;
+  margin: 150px auto;
 }
 
 .big-title {
-  font-size: rem(40);
+  color: #1976D2;
+  font-size: rem(60);
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -114,5 +115,13 @@ a {
 .other-article {
   @include media($desktop-x) {
     height: 500px;
+  }
+
+  small {
+    display: block;
+    text-align: center;
+    a {
+      color: #1976D2;
+    }
   }
 }
