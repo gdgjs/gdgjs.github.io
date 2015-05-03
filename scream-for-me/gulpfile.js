@@ -26,9 +26,9 @@ gulp.task('sass', function() {
       style: 'expanded',
       includePaths: neat
     }))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(minifycss())
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('build/css'));
 });
 
 // Watch task
