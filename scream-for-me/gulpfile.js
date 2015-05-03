@@ -4,6 +4,7 @@ var concat = require('gulp-concat');
 var minifycss = require('gulp-minify-css');
 var neat = require('node-neat').includePaths;
 var transform = require('vinyl-transform');
+var uglify = require('gulp-uglify');
 
 // Browserify task
 gulp.task('browserify', function() {
@@ -11,4 +12,10 @@ gulp.task('browserify', function() {
     var b = browserify(filename);
     return b.bundle();
   });
+
+  return gulp.src(['src/js/main.js'])
+    .pipe(browserified)
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js/a.js'));
 });
+
