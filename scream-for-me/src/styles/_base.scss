@@ -29,7 +29,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: auto;
 }
 
 a {
@@ -40,4 +39,62 @@ a {
 .wrap {
   @include outer-container;
   padding: em(20);
+}
+
+.welcome-article {
+  background: #01579B;
+  color: #fff;
+  @include media($desktop-x) {
+    height: 100vh;
+  }
+
+  @include media($tablet) {
+    padding: em(20);
+  }
+
+  @include media($mobile) {
+    padding: em(20);
+  }
+
+  p {
+    font-size: em(20);
+  }
+}
+
+.welcome-article__content {
+  @include media($desktop-x) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    text-align: center;
+  }
+}
+
+.welcome-calendar {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFEB3B;
+}
+
+.color-signature {
+  @include media($desktop-x) {
+    position: absolute;
+    bottom: 0;
+    clear: both;
+    margin: 30px auto 0;
+    width: 100%;
+    min-height: 4px;
+    background: #000;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0.25, #008AFA), color-stop(0.25, #FF002B), color-stop(0.5, #FF002B), color-stop(0.5, #FFAA00), color-stop(0.75, #FFAA00), color-stop(0.75, #00A754) );
+    background-image: -o-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+    background-image: -moz-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+    background-image: -webkit-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+    background-image: -ms-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+    background-image: linear-gradient(to right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+  }
+}
+
+.gdg-logo {
+  width: 100%;
 }

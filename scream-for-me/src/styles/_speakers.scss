@@ -1,3 +1,18 @@
-.speaker-picture {
+.talk-block {
+  @include clearfix;
+}
 
+.the-speaker {
+
+}
+
+.speaker-picture {
+  @include clearfix;
+  img {
+    width: 200px;
+    height: auto;
+  }
+  p {
+    display: block;
+  }
 }
