@@ -30,3 +30,11 @@ gulp.task('sass', function() {
     .pipe(minifycss())
     .pipe(gulp.dest('css'));
 });
+
+// Watch task
+gulp.task('watch', function() {
+  gulp.watch('src/**/*.*', ['default']);
+});
+
+// Default task
+gulp.task('default', ['browserify', 'sass']);
