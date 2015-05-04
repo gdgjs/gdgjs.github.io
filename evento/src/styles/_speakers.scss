@@ -1,0 +1,53 @@
+.talk-article {
+  padding: em(40) 0;
+}
+
+.talk-block {
+  @include clearfix;
+  padding: em(30) em(50);
+  margin: em(30) 0;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 8px 1px rgba(0,0,0,.1);
+  box-shadow: 1px 1px 8px 1px rgba(0,0,0,.1);
+  color: #37474F;
+}
+
+.talk-title {
+  text-align: center;
+}
+
+.the-speaker {
+  @include clearfix;
+}
+
+.speaker-picture {
+  @include clearfix;
+  display: block;
+  img {
+    width: 200px;
+    height: auto;
+    margin: auto;
+    border-radius: 100%;
+  }
+  p {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.speaker-picture__double {
+  @include clearfix;
+  @include media($desktop-x) {
+    @include span-columns(3);
+    @include shift(2);
+  }
+
+  @include media($tablet) {
+    @include span-columns(8);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}

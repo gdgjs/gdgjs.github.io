@@ -1,0 +1,109 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  overflow-y: scroll;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+
+  @include media($large-desktop) {
+    font-size: rem(16);
+  }
+
+  @include media($desktop) {
+    font-size: rem(16);
+  }
+
+  @include media($tablet) {
+    font-size: rem(14);
+  }
+
+  @include media($mobile) {
+    font-size: rem(14);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  @include transition(all .2s ease-in-out);
+}
+
+.wrap {
+  @include outer-container;
+  padding: em(20);
+}
+
+.welcome-article {
+  background: #1976D2;
+  color: #fff;
+  @include media($desktop-x) {
+    height: 100vh;
+  }
+
+  @include media($tablet) {
+    padding: em(20);
+  }
+
+  @include media($mobile) {
+    padding: em(20);
+  }
+
+  p {
+    font-size: em(20);
+  }
+}
+
+.welcome-article__content {
+  @include media($desktop-x) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    text-align: center;
+  }
+}
+
+.welcome-calendar {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFEB3B;
+}
+
+.gdg-logo {
+  width: 100%;
+}
+
+.google-developers__logo {
+  width: 500px;
+  margin: 150px auto;
+}
+
+.big-title {
+  color: #1976D2;
+  font-size: rem(60);
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.other-article {
+  @include media($desktop-x) {
+    height: 500px;
+  }
+
+  small {
+    display: block;
+    text-align: center;
+    a {
+      color: #1976D2;
+    }
+  }
+}
